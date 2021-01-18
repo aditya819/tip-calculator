@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tip calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <h1>Tip Calculator</h1>
+        <div>
+           <label>Bill amount</label>
+            <input type="text" name="" id="bill_amount">
+        <br>
+        <label>Tip percentage</label>
+            <input type="text" name="" id="Tip_percentage">
+        <br>
+        <label>Tip amount</label>
+            <input type="text" name="" id="Tip_amount" disabled>
+        <br>
+        <label>Total amount</label>
+            <input type="text" name="" id="total_amount" disabled>
+        <br>
+
+        <button onclick="tipcalcy()">calculate</button>
+       
+        </div>
+    </main>
+</body>
+<script>
+
+    const tipcalcy = () => {
+        let amount = document.getElementById('bill_amount').value;
+        
+        let percentage = document.getElementById('Tip_percentage').value
+        
+        let tip = amount * (percentage / 100);
+        
+
+        let total = tip + Number(amount);
+        
+        document.getElementById('Tip_amount').value = tip;
+
+
+        document.getElementById('total_amount').value = total;
+
+    }
+</script>
+</html>
